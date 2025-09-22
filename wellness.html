@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- GreenBite Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231abc9c'/><stop offset='100%' stop-color='%2316a085'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><circle cx='50' cy='50' r='40' fill='%232c3e50'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='url(%23grad)' font-family='Arial, sans-serif' font-weight='bold'>G</text></svg>" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite — Wellness</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="wellness.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">GREEN BITE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About Us</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="fitness.html">Fitness</a>
+      <a href="mindfulness.html">Mindfulness</a>
+      <a href="wellness.html" aria-current="page">Wellness</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero wellness">
+    <div class="hero-inner">
+      <h1>Holistic Wellness</h1>
+      <p>Track your hydration and sleep patterns to optimize your overall health and well-being.</p>
+    </div>
+  </section>
+
+  <!-- WHY WELLNESS MATTERS -->
+  <section class="wellness-matters">
+    <div class="color-half">
+      <h2>Why Wellness<br>Matters</h2>
+    </div>
+    <div class="info-half">
+      <p>Wellness is more than just the absence of illness—it's a holistic approach to health that encompasses physical, mental, and emotional well-being. At GreenBite, we believe that true wellness comes from balancing all aspects of your life.</p>
+      
+      <p>Proper hydration and quality sleep are foundational to overall wellness. Water is essential for nearly every bodily function, from regulating temperature to flushing out toxins. Meanwhile, sleep allows your body to repair itself and your brain to consolidate memories and process information.</p>
+      
+      <p>By paying attention to these fundamental needs, you can improve your energy levels, cognitive function, mood, and long-term health outcomes. Our tools help you understand and meet your body's basic requirements for optimal functioning.</p>
+    </div>
+  </section>
+
+  <!-- WATER CALCULATOR SECTION -->
+  <section class="water-section">
+    <h2 class="section-title">Hydration Calculator</h2>
+    <div class="water-container">
+      <div class="calculator-grid">
+        <div class="calculator-form">
+          <div class="form-group">
+            <label for="weight">Your Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter your weight" min="30" max="200">
+          </div>
+          
+          <div class="form-group">
+            <label for="activity">Activity Level (hours of exercise per day)</label>
+            <input type="number" id="activity" placeholder="Enter hours" min="0" max="10" step="0.5">
+          </div>
+          
+          <div class="form-group">
+            <label for="climate">Climate</label>
+            <select id="climate">
+              <option value="normal">Temperate/Normal</option>
+              <option value="hot">Hot/Humid</option>
+              <option value="cold">Cold/Dry</option>
+            </select>
+          </div>
+          
+          <button class="calculate-btn" id="calculateWaterBtn">Calculate Water Intake</button>
+          
+          <div id="waterResult" class="water-result">
+            <h3 class="result-title">Your Daily Water Needs</h3>
+            <p class="result-value" id="waterAmount">0 L</p>
+            <p class="result-detail" id="waterDetail">Based on your inputs, this is the recommended amount of water you should drink daily.</p>
+          </div>
+        </div>
+        
+        <div class="water-visual">
+          <div class="water-bottle">
+            <div class="water-fill" id="waterFill" style="height: 0%"></div>
+          </div>
+          <p>Your daily water intake</p>
+          
+          <div class="water-glass">
+            <div class="glass-fill" id="glassFill" style="height: 0%"></div>
+          </div>
+          <div class="water-info">
+            <p class="glass-count" id="glassCount">0 glasses</p>
+            <p>(1 glass = 250ml)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLEEP CALCULATOR SECTION -->
+  <section class="sleep-section">
+    <h2 class="section-title">Sleep Calculator</h2>
+    <div class="sleep-container">
+      <div class="sleep-form">
+        <div class="sleep-input">
+          <label for="wakeTime">What time do you need to wake up?</label>
+          <input type="time" id="wakeTime" value="07:00">
+        </div>
+        
+        <button class="calculate-btn" id="calculateSleepBtn">Calculate Bedtime</button>
+        
+        <div id="sleepResult" class="sleep-result">
+          <h3 class="result-title">Optimal Bedtimes</h3>
+          <p class="result-detail">For optimal rest, aim to fall asleep at one of these times to complete sleep cycles:</p>
+          
+          <div class="sleep-times">
+            <div class="sleep-card">
+              <div class="sleep-cycle">5-6 cycles (7.5-9 hours)</div>
+              <div class="sleep-time" id="sleepTime1">9:45 PM</div>
+              <div class="sleep-desc">Ideal for most adults</div>
+            </div>
+            
+            <div class="sleep-card">
+              <div class="sleep-cycle">4-5 cycles (6-7.5 hours)</div>
+              <div class="sleep-time" id="sleepTime2">11:15 PM</div>
+              <div class="sleep-desc">Minimum recommended</div>
+            </div>
+            
+            <div class="sleep-card">
+              <div class="sleep-cycle">6-7 cycles (9-10.5 hours)</div>
+              <div class="sleep-time" id="sleepTime3">8:15 PM</div>
+              <div class="sleep-desc">Ideal for recovery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WELLNESS TIPS SECTION -->
+  <section class="tips-section">
+    <h2 class="section-title">Wellness Tips</h2>
+    <div class="tips-container">
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">
+            <i class="fas fa-tint"></i>
+          </div>
+          <h3 class="tip-title">Hydration Tips</h3>
+          <p class="tip-desc">Start your day with a glass of water. Keep a water bottle handy throughout the day. Add natural flavors like lemon or cucumber if plain water is unappealing. Remember that fruits and vegetables also contribute to your daily water intake.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-icon">
+            <i class="fas fa-bed"></i>
+          </div>
+          <h3 class="tip-title">Sleep Quality</h3>
+          <p class="tip-desc">Maintain a consistent sleep schedule, even on weekends. Create a restful environment: cool, dark, and quiet. Avoid screens for at least an hour before bedtime. Limit caffeine and alcohol intake, especially in the evening.</p>
+        </div>
+        
+        <div class="tip-card">
+          <div class="tip-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <h3 class="tip-title">Nutrition & Hydration</h3>
+          <p class="tip-desc">Foods with high water content like watermelon, cucumbers, and oranges can contribute to hydration. Balance electrolytes with foods like bananas, spinach, and nuts. Avoid excessive sodium which can increase water needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © Green Bite — Healthy Living
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="wellness.js"></script>
+</body>
+</html>
+
+

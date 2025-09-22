@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- GreenBite Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231abc9c'/><stop offset='100%' stop-color='%2316a085'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><circle cx='50' cy='50' r='40' fill='%232c3e50'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='url(%23grad)' font-family='Arial, sans-serif' font-weight='bold'>G</text></svg>" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite — Fitness</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="fitness.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">GREEN BITE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About Us</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="fitness.html" aria-current="page">Fitness</a>
+      <a href="mindfulness.html">Mindfulness</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero fitness">
+    <div class="hero-inner">
+      <h1>Transform Your Fitness Journey</h1>
+      <p>Calculate your nutritional needs and generate personalized workout plans to achieve your fitness goals.</p>
+    </div>
+  </section>
+
+  <!-- WHY FITNESS MATTERS -->
+  <section class="fitness-matters">
+    <div class="color-half">
+      <h2>Why Fitness<br>Matters</h2>
+    </div>
+    <div class="info-half">
+      <p>Regular physical activity is one of the most important things you can do for your health. Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+      
+      <p>At GreenBite, we believe that fitness should be accessible, enjoyable, and sustainable. Our approach focuses on finding activities you love, setting realistic goals, and creating balanced routines that nourish both body and mind.</p>
+      
+      <p>Whether you're just starting your fitness journey or looking to break through a plateau, our tools and resources are designed to support you every step of the way. From personalized workout plans to nutritional guidance, we're here to help you build healthy habits that last a lifetime.</p>
+    </div>
+  </section>
+
+  <!-- NUTRITION CALCULATOR SECTION -->
+  <section class="calculator-section">
+    <h2 class="section-title">Calorie & Nutrition Calculator</h2>
+    <div class="calculator-container">
+      <form id="nutritionForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age (years)</label>
+            <input type="number" id="age" min="15" max="100" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" min="100" max="250" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" min="30" max="200" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="activity">Activity Level</label>
+          <select id="activity" required>
+            <option value="">Select Activity Level</option>
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+            <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+            <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+            <option value="1.9">Super active (very hard exercise/physical job)</option>
+          </select>
+        </div>
+        
+        <button type="button" class="calculate-btn" id="calculateBtn">Calculate My Needs</button>
+      </form>
+      
+      <div id="nutritionResult" class="calculator-result">
+        <div class="result-card">
+          <h3 class="result-title">Basal Metabolic Rate (BMR)</h3>
+          <p class="result-value" id="bmrResult">0 calories</p>
+          <p>Calories your body needs at rest</p>
+        </div>
+        
+        <div class="result-card">
+          <h3 class="result-title">Total Daily Energy Expenditure (TDEE)</h3>
+          <p class="result-value" id="tdeeResult">0 calories</p>
+          <p>Calories you need based on your activity level</p>
+        </div>
+        
+        <h3 class="result-title">Macronutrient Breakdown</h3>
+        <div class="macros-container">
+          <div class="macro-card">
+            <div class="macro-name">Carbohydrates</div>
+            <div class="macro-amount" id="carbsResult">0g</div>
+            <div class="progress-bar">
+              <div class="progress-fill carbs-progress"></div>
+            </div>
+            <div>50% of calories</div>
+          </div>
+          
+          <div class="macro-card">
+            <div class="macro-name">Protein</div>
+            <div class="macro-amount" id="proteinResult">0g</div>
+            <div class="progress-bar">
+              <div class="progress-fill protein-progress"></div>
+            </div>
+            <div>20% of calories</div>
+          </div>
+          
+          <div class="macro-card">
+            <div class="macro-name">Fat</div>
+            <div class="macro-amount" id="fatResult">0g</div>
+            <div class="progress-bar">
+              <div class="progress-fill fat-progress"></div>
+            </div>
+            <div>30% of calories</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKOUT GENERATOR SECTION -->
+  <section class="workout-section">
+    <h2 class="section-title">Workout Generator</h2>
+    <div class="workout-container">
+      <div class="workout-options">
+        <div class="option-group">
+          <label for="bodyPart">Focus Area</label>
+          <select id="bodyPart">
+            <option value="fullbody">Full Body</option>
+            <option value="upper">Upper Body</option>
+            <option value="lower">Lower Body</option>
+            <option value="core">Core</option>
+            <option value="cardio">Cardio</option>
+          </select>
+        </div>
+        
+        <div class="option-group">
+          <label for="equipment">Equipment</label>
+          <select id="equipment">
+            <option value="none">No Equipment</option>
+            <option value="dumbbells">Dumbbells</option>
+            <option value="resistance">Resistance Bands</option>
+            <option value="gym">Full Gym</option>
+          </select>
+        </div>
+        
+        <div class="option-group">
+          <label for="workoutLevel">Fitness Level</label>
+          <select id="workoutLevel">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+      </div>
+      
+      <button class="generate-btn" id="generateWorkoutBtn">Generate Workout</button>
+      
+      <div id="workoutResult" class="workout-result">
+        <div class="workout-plan" id="workoutPlan">
+          <!-- Workout plan will be generated here -->
+        </div>
+        
+        <div class="timer-container" id="timerContainer">
+          <h3>Exercise Timer</h3>
+          <div class="timer-display" id="timerDisplay">00:60</div>
+          <div class="timer-controls">
+            <button class="control-btn start-btn" id="startTimerBtn">Start</button>
+            <button class="control-btn pause-btn" id="pauseTimerBtn">Pause</button>
+            <button class="control-btn reset-btn" id="resetTimerBtn">Reset</button>
+          </div>
+        </div>
+        
+        <button class="print-btn" id="printWorkoutBtn">Print Workout Plan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © Green Bite — Healthy Living
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="fitness.js"></script>
+</body>
+</html>

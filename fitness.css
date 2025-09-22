@@ -1,0 +1,490 @@
+/* Page styling */
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+.hero.fitness {
+  background: url(./photos/fitness.jpg) center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.hero.fitness::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-inner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.hero-inner p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Why Fitness Matters Section */
+.fitness-matters {
+  display: flex;
+  max-width: 1200px;
+  margin: 4rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.color-half {
+  flex: 1;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.color-half h2 {
+  color: white;
+  font-size: 2.2rem;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}
+
+.info-half {
+  flex: 1;
+  background: white;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-half p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Section styling */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
+  padding-top: 2rem;
+}
+
+/* Nutrition Calculator Section */
+.calculator-section {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.calculator-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.calculate-btn {
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 2rem auto;
+  font-family: 'Cinzel', serif;
+}
+
+.calculate-btn:hover {
+  background: #16a085;
+}
+
+.calculator-result {
+  margin-top: 2.5rem;
+  display: none;
+}
+
+.result-card {
+  background: #e8f8f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.result-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #16a085;
+}
+
+.macros-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.macro-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.macro-name {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.macro-amount {
+  font-size: 1.2rem;
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.carbs-progress {
+  background: #4CAF50;
+  width: 50%;
+}
+
+.protein-progress {
+  background: #2196F3;
+  width: 20%;
+}
+
+.fat-progress {
+  background: #FF9800;
+  width: 30%;
+}
+
+/* Workout Generator Section */
+.workout-section {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.workout-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.workout-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.option-group {
+  margin-bottom: 1.5rem;
+}
+
+.option-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.option-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+}
+
+.generate-btn {
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Cinzel', serif;
+}
+
+.generate-btn:hover {
+  background: #16a085;
+}
+
+.workout-result {
+  margin-top: 2.5rem;
+  display: none;
+}
+
+.workout-plan {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.workout-day {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.workout-day:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.day-title {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.exercise-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.exercise-item {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exercise-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.exercise-details {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.timer-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.timer-btn:hover {
+  background: #1a252f;
+}
+
+.timer-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e8f8f5;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+}
+
+.timer-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 1rem 0;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+control-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.start-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.pause-btn {
+  background: #FF9800;
+  color: white;
+}
+
+.reset-btn {
+  background: #F44336;
+  color: white;
+}
+
+.print-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.print-btn:hover {
+  background: #1a252f;
+}
+
+footer {
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 900px) {
+  .fitness-matters {
+    flex-direction: column;
+    margin: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .macros-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .workout-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .exercise-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .hero-inner h1 {
+    font-size: 2.2rem;
+  }
+}

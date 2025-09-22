@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- GreenBite Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231abc9c'/><stop offset='100%' stop-color='%2316a085'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><circle cx='50' cy='50' r='40' fill='%232c3e50'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='url(%23grad)' font-family='Arial, sans-serif' font-weight='bold'>G</text></svg>" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite — Nutrition</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="nutrition.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">GREEN BITE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About Us</a>
+      <a href="nutrition.html" aria-current="page">Nutrition</a>
+      <a href="fitness.html">Fitness</a>
+      <a href="mindfulness.html">Mindfulness</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero nutrition">
+    <div class="hero-inner">
+      <h1>Nourish Your Body</h1>
+      <p>Discover delicious, nutrient-packed recipes that fuel your body and support your wellness journey.</p>
+    </div>
+  </section>
+
+  <!-- WHY NUTRITION MATTERS -->
+  <section class="nutrition-matters">
+    <div class="color-half">
+      <h2>Why Nutrition<br>Matters</h2>
+    </div>
+    <div class="info-half">
+      <p>Proper nutrition is the foundation of a healthy lifestyle. The food we consume directly impacts our energy levels, mental clarity, immune function, and overall well-being. At GreenBite, we believe that eating well shouldn't be complicated or restrictive.</p>
+      
+      <p>Our approach focuses on whole, nutrient-dense foods that provide your body with the essential vitamins, minerals, and antioxidants it needs to thrive. Whether you're looking to boost your energy, support your immune system, or maintain a healthy weight, the right nutrition can make all the difference.</p>
+      
+      <p>Explore our collection of delicious recipes designed to nourish your body from the inside out. Each recipe is crafted with care, balancing flavor and nutrition to help you build sustainable eating habits that support your wellness goals.</p>
+    </div>
+  </section>
+
+  <!-- SEARCH AND FILTERS -->
+  <div class="search-filters">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for recipes...">
+      <button onclick="searchRecipes()"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="filters">
+      <div class="filter-btn active" data-filter="all">All Recipes</div>
+      <div class="filter-btn" data-filter="breakfast">Breakfast</div>
+      <div class="filter-btn" data-filter="lunch">Lunch</div>
+      <div class="filter-btn" data-filter="dinner">Dinner</div>
+      <div class="filter-btn" data-filter="snack">Snacks</div>
+    </div>
+  </div>
+
+  <!-- RECIPES SECTION -->
+  <section class="recipes-section">
+    <h2 class="section-title">Featured Recipes</h2>
+    <div id="recipes-grid" class="recipes-grid">
+      <!-- Recipes will be dynamically inserted here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- DAILY EATING ROUTINE -->
+  <section class="routine-section">
+    <h2 class="section-title">Daily Eating Routine</h2>
+    <div class="routine-grid">
+      <div class="routine-card">
+        <div class="routine-time">7:00 AM</div>
+        <div class="routine-meal">Morning Hydration</div>
+        <p class="routine-desc">Start your day with a glass of warm water with lemon to hydrate and kickstart your digestion.</p>
+      </div>
+      
+      <div class="routine-card">
+        <div class="routine-time">8:00 AM</div>
+        <div class="routine-meal">Balanced Breakfast</div>
+        <p class="routine-desc">Fuel your morning with a combination of complex carbs, protein, and healthy fats for sustained energy.</p>
+      </div>
+      
+      <div class="routine-card">
+        <div class="routine-time">10:30 AM</div>
+        <div class="routine-meal">Mid-Morning Snack</div>
+        <p class="routine-desc">A small, nutrient-dense snack to maintain energy levels and prevent overeating at lunch.</p>
+      </div>
+      
+      <div class="routine-card">
+        <div class="routine-time">12:30 PM</div>
+        <div class="routine-meal">Nourishing Lunch</div>
+        <p class="routine-desc">A well-balanced meal with lean protein, complex carbohydrates, and plenty of vegetables.</p>
+      </div>
+      
+      <div class="routine-card">
+        <div class="routine-time">3:30 PM</div>
+        <div class="routine-meal">Afternoon Boost</div>
+        <p class="routine-desc">A light snack to combat the afternoon slump and keep energy levels stable until dinner.</p>
+      </div>
+      
+      <div class="routine-card">
+        <div class="routine-time">6:30 PM</div>
+        <div class="routine-meal">Light Dinner</div>
+        <p class="routine-desc">A satisfying but not too heavy dinner that provides essential nutrients without overtaxing digestion before sleep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL CONTAINER -->
+  <div id="modal-container">
+    <!-- Modals will be dynamically inserted here by JavaScript -->
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © Green Bite — Healthy Living
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="recipes-data.js"></script>
+  <script src="nutrition.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
