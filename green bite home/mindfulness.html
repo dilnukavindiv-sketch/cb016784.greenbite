@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- GreenBite Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231abc9c'/><stop offset='100%' stop-color='%2316a085'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><circle cx='50' cy='50' r='40' fill='%232c3e50'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='url(%23grad)' font-family='Arial, sans-serif' font-weight='bold'>G</text></svg>" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite — Mindfulness</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="mindfulness.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">GREEN BITE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About Us</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="fitness.html">Fitness</a>
+      <a href="mindfulness.html" aria-current="page">Mindfulness</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero mindfulness">
+    <div class="hero-inner">
+      <h1>Find Your Inner Peace</h1>
+      <p>Discover mindfulness practices and meditation techniques to reduce stress and enhance your well-being.</p>
+    </div>
+  </section>
+
+  <!-- WHY MINDFULNESS MATTERS -->
+  <section class="mindfulness-matters">
+    <div class="color-half">
+      <h2>Why Mindfulness<br>Matters</h2>
+    </div>
+    <div class="info-half">
+      <p>Mindfulness is the practice of purposely focusing your attention on the present moment and accepting it without judgment. Research has shown that mindfulness is associated with improved well-being, reduced stress, and better mental health.</p>
+      
+      <p>At GreenBite, we believe that mindfulness is an essential component of overall wellness. By cultivating awareness and presence, we can better manage stress, improve our relationships, and enhance our quality of life.</p>
+      
+      <p>Regular mindfulness practice can help rewire your brain, making it easier to focus, regulate emotions, and respond thoughtfully rather than react impulsively to life's challenges.</p>
+    </div>
+  </section>
+
+  <!-- MINDFULNESS PRACTICES SECTION -->
+  <section class="practices-section">
+    <h2 class="section-title">Mindfulness Practices</h2>
+    <div class="practices-container">
+      <div class="practices-grid">
+        <div class="practice-card">
+          <div class="practice-icon">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3 class="practice-title">Mindful Breathing</h3>
+          <p class="practice-desc">A simple practice to anchor yourself in the present moment by focusing on your breath.</p>
+          <ol class="practice-steps">
+            <li>Find a comfortable sitting position</li>
+            <li>Close your eyes and take a few deep breaths</li>
+            <li>Notice the sensation of air moving in and out</li>
+            <li>When your mind wanders, gently return focus to your breath</li>
+            <li>Practice for 5-10 minutes daily</li>
+          </ol>
+        </div>
+        
+        <div class="practice-card">
+          <div class="practice-icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <h3 class="practice-title">Mindful Walking</h3>
+          <p class="practice-desc">Bring awareness to the simple act of walking to connect with your body and surroundings.</p>
+          <ol class="practice-steps">
+            <li>Walk at a natural pace with hands comfortably at your sides</li>
+            <li>Focus on the physical sensations of walking</li>
+            <li>Notice the movement of your legs and feet</li>
+            <li>If your mind wanders, gently return to the sensations of walking</li>
+            <li>Practice for 10-15 minutes outdoors when possible</li>
+          </ol>
+        </div>
+        
+        <div class="practice-card">
+          <div class="practice-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="practice-title">Mindful Eating</h3>
+          <p class="practice-desc">Transform eating from a mindless activity into a conscious practice of appreciation.</p>
+          <ol class="practice-steps">
+            <li>Before eating, take a moment to appreciate your food</li>
+            <li>Notice the colors, textures, and aromas</li>
+            <li>Take small bites and chew slowly</li>
+            <li>Pay attention to the flavors and sensations</li>
+            <li>Put down your utensil between bites</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREATHING EXERCISE SECTION -->
+  <section class="breathing-section">
+    <h2 class="section-title">Guided Breathing Exercise</h2>
+    <div class="breathing-container">
+      <div class="breathing-circle" id="breathingCircle">
+        Breathe In
+      </div>
+      
+      <div class="breathing-controls">
+        <button class="breathing-btn breathing-active" data-pattern="4-7-8">4-7-8 Technique</button>
+        <button class="breathing-btn" data-pattern="box">Box Breathing</button>
+        <button class="breathing-btn" data-pattern="deep">Deep Breathing</button>
+      </div>
+      
+      <div class="breathing-instruction" id="breathingInstruction">
+        Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds
+      </div>
+      
+      <div class="timer-controls">
+        <button class="timer-btn start-btn" id="startBreathing">Start</button>
+        <button class="timer-btn pause-btn" id="pauseBreathing">Pause</button>
+        <button class="timer-btn reset-btn" id="resetBreathing">Reset</button>
+      </div>
+      
+      <div class="timer-display" id="breathingTimer">00:00</div>
+    </div>
+  </section>
+
+  <!-- AMBIENT SOUNDS SECTION -->
+  <section class="sounds-section">
+    <h2 class="section-title">Ambient Sounds</h2>
+    <div class="sounds-container">
+      <div class="sounds-grid">
+        <div class="sound-card">
+          <div class="sound-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h3 class="sound-title">Ocean Waves</h3>
+          <button class="sound-toggle" data-sound="ocean">Play</button>
+          <input type="range" class="volume-control" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        
+        <div class="sound-card">
+          <div class="sound-icon">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3 class="sound-title">Forest</h3>
+          <button class="sound-toggle" data-sound="forest">Play</button>
+          <input type="range" class="volume-control" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        
+        <div class="sound-card">
+          <div class="sound-icon">
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+          <h3 class="sound-title">Rain</h3>
+          <button class="sound-toggle" data-sound="rain">Play</button>
+          <input type="range" class="volume-control" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        
+        <div class="sound-card">
+          <div class="sound-icon">
+            <i class="fas fa-wind"></i>
+          </div>
+          <h3 class="sound-title">White Noise</h3>
+          <button class="sound-toggle" data-sound="white-noise">Play</button>
+          <input type="range" class="volume-control" min="0" max="1" step="0.1" value="0.5">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDITATION TIMER SECTION -->
+  <section class="meditation-section">
+    <h2 class="section-title">Meditation Timer</h2>
+    <div class="meditation-container">
+      <div class="timer-circle" id="meditationTimer">
+        10:00
+      </div>
+      
+      <div class="timer-controls">
+        <button class="time-option active" data-time="300">5 min</button>
+        <button class="time-option" data-time="600">10 min</button>
+        <button class="time-option" data-time="900">15 min</button>
+        <button class="time-option" data-time="1800">30 min</button>
+      </div>
+      
+      <div class="meditation-controls">
+        <button class="timer-btn start-btn" id="startMeditation">Start</button>
+        <button class="timer-btn pause-btn" id="pauseMeditation">Pause</button>
+        <button class="timer-btn reset-btn" id="resetMeditation">Reset</button>
+      </div>
+      
+      <div class="session-tracker">
+        <p>Today's meditation sessions: <span class="session-count" id="sessionCount">0</span></p>
+        <p>Total sessions this week: <span class="session-count" id="weeklySessions">0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © Green Bite — Healthy Living
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="mindfulness.js"></script>
+</body>
+</html>

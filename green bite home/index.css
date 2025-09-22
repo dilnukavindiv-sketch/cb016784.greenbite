@@ -1,0 +1,721 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1abc9c;
+}
+
+/* Hero Section */
+.hero {
+  background: url("./photos/home\ page.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-inner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.btn {
+  background: #1abc9c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #16a085;
+}
+
+/* Consultation Section */
+.consultation-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #f8fff8, #f0f8ff);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Cinzel', serif;
+  color: #2c3e50;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1abc9c;
+  margin: 15px auto;
+}
+
+.consultation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.consultation-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consultation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.consultation-icon {
+  background: #2c3e50;
+  color: white;
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.consultation-content {
+  padding: 2rem;
+}
+
+.consultation-content h3 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.consultation-content p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.consultation-btn {
+  display: inline-block;
+  background: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.consultation-btn:hover {
+  background: #16a085;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-stats {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Divider Section */
+.divider {
+  background: #3e2723;
+  color: #fff;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.divider-content {
+  max-width: 900px;
+}
+
+.divider h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.divider p {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fdfaf6;
+}
+
+.services h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-family: 'Cinzel', serif;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-img {
+  height: 160px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+/* Specific backgrounds for each service */
+.nutrition-img { background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"); }
+.fitness-img { background-image: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80"); }
+.mindfulness-img { background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80"); }
+.wellness-img { background-image: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80"); }
+
+.service-card h3 {
+  margin: 20px 0 10px;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  padding: 0 20px 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* About Us Section */
+.about {
+  display: flex;
+  min-height: 400px;
+}
+
+.about-left {
+  flex: 1;
+  background: #2c3e50;
+}
+
+.about-right {
+  flex: 1;
+  padding: 60px;
+  background: #fdfaf6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-right h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.about-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 55ch;
+}
+
+/* Health Tip of the Day Section */
+.tip {
+  background: linear-gradient(135deg, #1d976c 0%, #93f9b9 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.tip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1350&q=80') center/cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.tip h2 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#health-tip {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+/* Refresh button styling */
+.tip-refresh {
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.refresh-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.feedback-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.feedback-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feedback-form, .recent-feedback {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form:hover, .recent-feedback:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.feedback-form h3, .recent-feedback h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star {
+  font-size: 1.8rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star:hover, .star.active {
+  color: #ffc107;
+}
+
+.submit-btn {
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #16a085;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feedback-item {
+  padding: 1.2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #1abc9c;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.user-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.user-rating span {
+  color: #ddd;
+}
+
+.user-rating .filled {
+  color: #ffc107;
+}
+
+.feedback-text {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Footer Section */
+.footer {
+  background: #2c3e50;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+#subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+#subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+#subscribe-form button {
+  padding: 10px 15px;
+  border: none;
+  background: #1abc9c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#subscribe-form button:hover {
+  background: #16a085;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .feedback-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .consultation-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .consultation-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about {
+    flex-direction: column;
+  }
+  
+  .about-left {
+    min-height: 200px;
+  }
+  
+  .hero-inner h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero {
+    padding: 6rem 2rem;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  nav a {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tip {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .tip h2 {
+    font-size: 1.8rem;
+  }
+  
+  #health-tip {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+  
+  .service-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

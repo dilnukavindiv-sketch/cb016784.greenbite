@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- GreenBite Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%231abc9c'/><stop offset='100%' stop-color='%2316a085'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='url(%23grad)'/><circle cx='50' cy='50' r='40' fill='%232c3e50'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='url(%23grad)' font-family='Arial, sans-serif' font-weight='bold'>G</text></svg>" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite — Contact Us</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">GREEN BITE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About Us</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="fitness.html">Fitness</a>
+      <a href="mindfulness.html">Mindfulness</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero contact">
+    <div class="hero-inner">
+      <h1>Talk to Us – We Don't Bite</h1>
+      <p>We'd love to hear from you. Reach out to us with questions, feedback, or to learn more about our services.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3>Address</h3>
+          <p>APIIT Kandy Campus<br>Kandy, Sri Lanka</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Phone Numbers</h3>
+          <p>Main: +94 812 345 678<br>Support: +94 812 345 679<br>Mobile: +94 77 123 4567</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email Addresses</h3>
+          <p>Info: info@greenbite.com<br>Support: support@greenbite.com<br>APIIT: apiit@greenbite.com</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <h3>Business Hours</h3>
+          <p>Monday-Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+        
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="What is this regarding?" required>
+        
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Type your message here..." required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- MAP SECTION -->
+  <section class="map-section">
+    <h2>Our Location</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d633.603026547301!2d80.63555372922405!3d7.297257096900647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366266498acd3%3A0x411b5c4665c7c5fc!2sAsia%20Pacific%20Institute%20of%20Information%20Technology%20(APIIT)!5e0!3m2!1sen!2slk!4v1718722214469!5m2!1sen!2slk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <h2>Stay Connected with GreenBite</h2>
+      <p>Subscribe to our newsletter for the latest health tips, recipes, and wellness advice.</p>
+      
+      <form class="newsletter-form" id="newsletterForm">
+        <div class="form-group">
+          <label for="newsletterName">Your Name</label>
+          <input type="text" id="newsletterName" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="newsletterEmail">Email Address</label>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="newsletterPreferences">Preferences</label>
+          <div class="preference-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="preferences" value="recipes"> Recipes
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="preferences" value="fitness"> Fitness Tips
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="preferences" value="mindfulness"> Mindfulness
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="preferences" value="wellness"> Wellness Advice
+            </label>
+          </div>
+        </div>
+        
+        <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+      </form>
+      
+      <div class="newsletter-success" id="newsletterSuccess">
+        <i class="fas fa-check-circle"></i>
+        <h3>Thank you for subscribing!</h3>
+        <p>You'll receive our next newsletter soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © Green Bite — Healthy Living
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="contact.js"></script>
+</body>
+</html>
